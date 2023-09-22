@@ -1,0 +1,27 @@
+# Fichiers compilés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Environnements virtuels
+venv/
+env/
+.env
+
+# Fichiers de distribution
+dist/
+build/
+*.egg-info/
+
+# Fichiers de configuration de l'éditeur
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Fichiers temporaires
+*.tmp
+*.log
+
