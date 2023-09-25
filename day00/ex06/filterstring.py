@@ -1,4 +1,4 @@
-import sys
+import sys as sys
 
 
 def filtrer_mots(chaine, n):

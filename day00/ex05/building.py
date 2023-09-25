@@ -3,6 +3,23 @@ import string
 
 
 def compter_caracteres(texte):
+    """
+    Compte différents types de caractères dans une chaîne de caractères.
+
+    La fonction analyse le texte fourni et affiche:
+    - Nombre total de caractères.
+    - Nombre de lettres majuscules.
+    - Nombre de lettres minuscules.
+    - Nombre de signes de ponctuation.
+    - Nombre d'espaces.
+    - Nombre de chiffres.
+
+    Paramètres:
+    - texte (str): Chaîne à analyser.
+
+    Résultat:
+    Affiche les compteurs pour chaque type de caractère.
+    """
     upper_letters = sum(1 for char in texte if char.isupper())
     lower_letters = sum(1 for char in texte if char.islower())
     punctuation = sum(1 for char in texte if char in string.punctuation)
@@ -28,6 +45,7 @@ def main():
         try:
             # Use readline() instead of input() to better handle the EOF
             # situation (Ctrl+D).
+            print("What is the text to count?")
             texte = sys.stdin.readline()
             if not texte:  # Si l'utilisateur a juste fait Ctrl+D
                 print("No input provided. Exiting.")

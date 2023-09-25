@@ -16,6 +16,24 @@ NESTED_MORSE = {
 
 
 def to_morse(chaine):
+    """
+    Convertit une chaîne de caractères en code Morse.
+
+    La fonction prend une chaîne en entrée et la convertit en Morse,
+    en utilisant un dictionnaire de traduction. Les caractères non
+    reconnus seront ignorés.
+
+    Paramètres:
+    - chaine (str): La chaîne à traduire.
+
+    Retour:
+    - str: Chaîne traduite en Morse.
+
+    Exemple:
+    >>> to_morse("hello")
+    ".... . .-.. .-.. ---"
+    """
+
     morse_translated_str = ''.join(
         NESTED_MORSE[char.upper()] for char in chaine)
     return morse_translated_str[:-1]

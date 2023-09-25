@@ -2,6 +2,27 @@ import sys
 
 
 def ft_tqdm(iterable, unit='it', desc='', total=None):
+    """
+    Simplified tqdm-style progress bar generator.
+
+    Parameters:
+    - iterable (iterable): Iterable object to loop over.
+    - unit (str): Label for the iteration unit. Default is 'it'.
+    - desc (str): Description prefix for the progress bar.
+    - total (int): Total number of iterations. If None, length of
+      the iterable will be used.
+
+    Yields:
+    - item: Next item from the iterable.
+
+    Prints a progress bar to stdout showing the percentage completed,
+    the progress bar itself, and the current iteration number out
+    of the total.
+
+    Example:
+    >>> for i in ft_tqdm(range(100)):
+    ...     time.sleep(0.01)
+    """
     total = total or len(iterable)
 
     for i, item in enumerate(iterable, 1):
