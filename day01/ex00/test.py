@@ -48,6 +48,9 @@ def main():
                 print("Nobody is overweight")
             else:
                 print("Somebody is overweight oupsy")
+    
+    print("test print doc")
+    print(give_bmi.__doc__)
 
 
 if __name__ == "__main__":
