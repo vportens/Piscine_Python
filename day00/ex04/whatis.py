@@ -16,10 +16,7 @@ def argChecker():
         return
     assert is_integer(s[1]), "argument is not an integer"
     number = int(s[1])
-    if number % 2 == 0:
-        print("I'm Even.")
-    else:
-        print("I'm Odd.")
+    print("I'm Even.") if number % 2 == 0 else print("I'm Odd.")
 
 
 try:
