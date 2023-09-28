@@ -1,11 +1,9 @@
-
-import numpy as np
-from PIL import Image
 import matplotlib.pyplot as plt
+
 
 def ft_invert(array):
     # Vérifiez si l'image est en niveaux de gris ou en couleur
-        # Image en couleur
+    # Image en couleur
     inverted_array = 255 - array
 
     # Afficher les images côte à côte pour comparer
@@ -24,7 +22,7 @@ def ft_invert(array):
     return inverted_array
 
 
-def ft_red(array): 
+def ft_red(array):
 
     red_copy = array.copy()
     if len(array.shape) == 2:
@@ -33,10 +31,9 @@ def ft_red(array):
     plt.title('Original Image')
     plt.imshow(array, cmap='gray' if len(array.shape) == 2 else None)
     plt.axis('off')
-    
-    red_copy[:,:,1] *= 0  # Mettre à zéro le canal vert
-    red_copy[:,:,2] *= 0  # Mettre à zéro le canal bleu
-    
+
+    red_copy[:, :, 1] *= 0  # Mettre à zéro le canal vert
+    red_copy[:, :, 2] *= 0  # Mettre à zéro le canal bleu
 
     plt.subplot(1, 2, 2)
     plt.title('Red Image')
@@ -48,7 +45,8 @@ def ft_red(array):
 
 
 def ft_bleu(array):
-    # Si l'image est en niveau de gris, elle n'a pas de canaux distincts, donc nous retournons simplement l'image.
+    # Si l'image est en niveau de gris, elle n'a pas de canaux distincts,
+    # donc nous retournons simplement l'image.
     bleu_copy = array.copy()
 
     if len(array.shape) == 2:
@@ -58,11 +56,10 @@ def ft_bleu(array):
     plt.title('Original Image')
     plt.imshow(array, cmap='gray' if len(array.shape) == 2 else None)
     plt.axis('off')
- 
 
     # Mettre à zéro les canaux rouge et vert
-    bleu_copy[:,:,0] = 0  # Canal rouge
-    bleu_copy[:,:,1] = 0  # Canal vert
+    bleu_copy[:, :, 0] = 0  # Canal rouge
+    bleu_copy[:, :, 1] = 0  # Canal vert
 
     plt.subplot(1, 2, 2)
     plt.title('Bleu Image')
@@ -70,12 +67,12 @@ def ft_bleu(array):
     plt.axis('off')
     plt.show()
 
-    return bleu_copy 
-
+    return bleu_copy
 
 
 def ft_green(array):
-    # Si l'image est en niveau de gris, elle n'a pas de canaux distincts, donc nous retournons simplement l'image.
+    # Si l'image est en niveau de gris, elle n'a pas de canaux distincts,
+    # donc nous retournons simplement l'image.
     green_copy = array.copy()
 
     if len(array.shape) == 2:
@@ -85,11 +82,10 @@ def ft_green(array):
     plt.title('Original Image')
     plt.imshow(array, cmap='gray' if len(array.shape) == 2 else None)
     plt.axis('off')
- 
 
     # Mettre à zéro les canaux rouge et vert
-    green_copy[:,:,0] = 0  # Canal rouge
-    green_copy[:,:,2] = 0  # Canal bleu 
+    green_copy[:, :, 0] = 0  # Canal rouge
+    green_copy[:, :, 2] = 0  # Canal bleu
 
     plt.subplot(1, 2, 2)
     plt.title('Green Image')
@@ -97,11 +93,12 @@ def ft_green(array):
     plt.axis('off')
     plt.show()
 
-    return green_copy 
+    return green_copy
 
 
 def ft_grey(array):
-    # Si l'image est déjà en niveau de gris, elle n'a pas de canaux distincts, donc nous retournons simplement l'image.
+    # Si l'image est déjà en niveau de gris, elle n'a pas de canaux distincts,
+    # donc nous retournons simplement l'image.
 
     grey_copy = array.copy()
 
@@ -109,16 +106,17 @@ def ft_grey(array):
     plt.title('Original Image')
     plt.imshow(array, cmap='gray' if len(array.shape) == 2 else None)
     plt.axis('off')
- 
+
     if len(array.shape) == 2:
         return array
 
     # Créer une copie de l'array original
 
-    # Mettre la valeur de rouge partout car on ne peut utiliser que l'operateur = et / 
+    # Mettre la valeur de rouge partout,
+    # on ne peut utiliser que l'operateur = et /.
     # On aurait pu mettre la valeur de vert ou de bleu a la place de rouge
-    grey_copy[:,:,1] = grey_copy[:,:,0]
-    grey_copy[:,:,2] = grey_copy[:,:,0]
+    grey_copy[:, :, 1] = grey_copy[:, :, 0]
+    grey_copy[:, :, 2] = grey_copy[:, :, 0]
 
     plt.subplot(1, 2, 2)
     plt.title('Grey Image')
@@ -127,17 +125,3 @@ def ft_grey(array):
     plt.show()
 
     return grey_copy
-
-
-
-
-# Charger l'image
-img = Image.open('landscape.jpg')
-img_array = np.array(img)
-
-# Inversez les couleurs et affichez l'image
-# inverted_image_array = ft_invert(img_array)
-# red_image_array = ft_red(img_array)
-# bleu_image_array = ft_bleu(img_array)
-# vert_image_array = ft_green(img_array)
-grey_image_array = ft_grey(img_array)

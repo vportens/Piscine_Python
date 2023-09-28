@@ -25,10 +25,6 @@ def display_info(img_array: np.array, channel):
     print(flattened_img)
 
 
-
-    
-
-
 def display_img(zoomed_img: np.array, channel):
     """
     Display the image.
