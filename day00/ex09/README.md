@@ -8,7 +8,7 @@ python setup.py sdist bdist_wheel
 
 ### Step 2 : Create a executable env to not polluate our production env
 ```
-python3 -m venv your_env_name
+virtualenv your_env_name
 ```
 ```
 source your_env_name/bin/activate
