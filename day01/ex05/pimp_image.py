@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 
-def ft_invert(array):
+def ft_invert(array) -> np.array:
     # Vérifiez si l'image est en niveaux de gris ou en couleur
     # Image en couleur
     inverted_array = 255 - array
@@ -22,7 +23,7 @@ def ft_invert(array):
     return inverted_array
 
 
-def ft_red(array):
+def ft_red(array) -> np.array:
 
     red_copy = array.copy()
     if len(array.shape) == 2:
@@ -44,7 +45,7 @@ def ft_red(array):
     return (red_copy)
 
 
-def ft_bleu(array):
+def ft_bleu(array) -> np.array:
     # Si l'image est en niveau de gris, elle n'a pas de canaux distincts,
     # donc nous retournons simplement l'image.
     bleu_copy = array.copy()
@@ -70,7 +71,7 @@ def ft_bleu(array):
     return bleu_copy
 
 
-def ft_green(array):
+def ft_green(array) -> np.array:
     # Si l'image est en niveau de gris, elle n'a pas de canaux distincts,
     # donc nous retournons simplement l'image.
     green_copy = array.copy()
@@ -96,7 +97,7 @@ def ft_green(array):
     return green_copy
 
 
-def ft_grey(array):
+def ft_grey(array) -> np.array:
     # Si l'image est déjà en niveau de gris, elle n'a pas de canaux distincts,
     # donc nous retournons simplement l'image.
 

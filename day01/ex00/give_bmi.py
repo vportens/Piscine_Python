@@ -2,20 +2,20 @@ def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
 
     """
-    Calcule l'IMC (Indice de Masse Corporelle) pour chaque paire de valeurs
-    taille-poids fournies.
+    Calculate the BMI (Body Mass Index) for each pair of height-weight values
+    provided.
 
     Parameters:
-    - height (list[int | float]): Une liste contenant des hauteurs en mètres.
-    - weight (list[int | float]): Une liste contenant des poids en kilogrammes.
+    - height (list[int | float]): A list containing heights in meters.
+    - weight (list[int | float]): A list containing weights in kilograms.
 
     Returns:
-    - list[int | float]: Une liste des valeurs IMC calculées.
+    - list[int | float]: A list of computed BMI values.
 
     Raises:
-    - ValueError: Si les deux listes n'ont pas la même longueur.
-    - ValueError: Si l'un des éléments des listes n'est pas un int ou un float.
-    - ValueError: Si la taille ou le poids est inférieur ou égal à 0.
+    - ValueError: If the two lists do not have the same length.
+    - ValueError: If any element in the lists is not an int or a float.
+    - ValueError: If height or weight is less than or equal to 0.
 
     Examples:
     >>> give_bmi([1.8, 1.65], [70, 55])
@@ -40,6 +40,25 @@ def give_bmi(height: list[int | float],
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """
+    Determine whether each BMI value in the list is below a specified limit.
+
+    Parameters:
+    - bmi (list[int | float]): A list of BMI values.
+    - limit (int): The BMI limit to compare against.
+
+    Returns:
+    - list[bool]: A list of booleans indicating whether each BMI value is
+                  below the 'limit'.
+
+    Raises:
+    - ValueError: If any element in the 'bmi' list is not an int or a float.
+    - ValueError: If 'limit' is not an int.
+
+    Examples:
+    >>> apply_limit([21.6, 20.2], 21)
+    [False, True]
+    """
     if not all(isinstance(b, (int, float)) for b in bmi):
         raise ValueError("Tous les éléments de la liste 'bmi' "
                          "doivent être des int ou des float.")

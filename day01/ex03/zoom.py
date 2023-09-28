@@ -35,9 +35,6 @@ def display_img(zoomed_img: np.array, channel):
 
     plt.imshow(grayscale_img, cmap='gray')
 
-    plt.xlabel("X-axis")
-    plt.ylabel("Y-axis")
-
     y_ticks = range(0, zoomed_img.shape[0]+1, zoomed_img.shape[0]//10)
     x_ticks = range(0, zoomed_img.shape[1]+1, zoomed_img.shape[1]//10)
 
