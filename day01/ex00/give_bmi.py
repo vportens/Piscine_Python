@@ -1,8 +1,9 @@
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
-    
+
     """
-    Calcule l'IMC (Indice de Masse Corporelle) pour chaque paire de valeurs taille-poids fournies.
+    Calcule l'IMC (Indice de Masse Corporelle) pour chaque paire de valeurs
+    taille-poids fournies.
 
     Parameters:
     - height (list[int | float]): Une liste contenant des hauteurs en mètres.
