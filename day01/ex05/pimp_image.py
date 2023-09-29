@@ -3,6 +3,15 @@ import numpy as np
 
 
 def ft_invert(array) -> np.array:
+    """
+    Inverse les couleurs d'une image (négatif).
+    
+    Args:
+        array (np.array): Image à inverser.
+        
+    Returns:
+        np.array: Image avec couleurs inversées.
+    """
     # Vérifiez si l'image est en niveaux de gris ou en couleur
     # Image en couleur
     inverted_array = 255 - array
@@ -24,7 +33,15 @@ def ft_invert(array) -> np.array:
 
 
 def ft_red(array) -> np.array:
-
+    """
+    Garde seulement le canal rouge d'une image couleur.
+    
+    Args:
+        array (np.array): Image à traiter.
+        
+    Returns:
+        np.array: Image avec seul canal rouge.
+    """
     red_copy = array.copy()
     if len(array.shape) == 2:
         return array
@@ -46,6 +63,15 @@ def ft_red(array) -> np.array:
 
 
 def ft_bleu(array) -> np.array:
+    """
+    Garde seulement le canal bleu d'une image couleur.
+    
+    Args:
+        array (np.array): Image à traiter.
+        
+    Returns:
+        np.array: Image avec seul canal bleu.
+    """ 
     # Si l'image est en niveau de gris, elle n'a pas de canaux distincts,
     # donc nous retournons simplement l'image.
     bleu_copy = array.copy()
@@ -72,6 +98,15 @@ def ft_bleu(array) -> np.array:
 
 
 def ft_green(array) -> np.array:
+    """
+    Garde seulement le canal vert d'une image couleur.
+    
+    Args:
+        array (np.array): Image à traiter.
+        
+    Returns:
+        np.array: Image avec seul canal vert.
+    """
     # Si l'image est en niveau de gris, elle n'a pas de canaux distincts,
     # donc nous retournons simplement l'image.
     green_copy = array.copy()
@@ -98,6 +133,15 @@ def ft_green(array) -> np.array:
 
 
 def ft_grey(array) -> np.array:
+    """
+    Convertit une image couleur en niveaux de gris.
+    
+    Args:
+        array (np.array): Image à convertir.
+        
+    Returns:
+        np.array: Image en niveaux de gris.
+    """
     # Si l'image est déjà en niveau de gris, elle n'a pas de canaux distincts,
     # donc nous retournons simplement l'image.
 

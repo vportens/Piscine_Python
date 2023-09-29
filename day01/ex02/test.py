@@ -1,3 +1,6 @@
 from load_image import ft_load
 
-print(ft_load("landscape.jpg"))
+try:
+    print(ft_load("landscape.jpg"))
+except Exception as e:
+    print(f"error : {e}")
