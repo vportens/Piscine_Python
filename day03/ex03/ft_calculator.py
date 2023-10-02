@@ -7,21 +7,25 @@ class calculator:
     def __add__(self, scalar):
         result = [x + scalar for x in self.vector]
         print(result)
+        self.vector = result
         return calculator(result)
 
     def __mul__(self, scalar):
         result = [x * scalar for x in self.vector]
         print(result)
+        self.vector = result
         return calculator(result)
 
     def __sub__(self, scalar):
         result = [x - scalar for x in self.vector]
         print(result)
+        self.vector = result
         return calculator(result)
 
     def __truediv__(self, scalar):
         if scalar == 0:
             raise ZeroDivisionError("Cannot divide by zero!")
         result = [x / scalar for x in self.vector]
+        self.vector = result
         print(result)
         return calculator(result)
