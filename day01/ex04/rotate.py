@@ -48,6 +48,10 @@ def ft_transpose(image_array: np.array):
 
 
 def main():
+    """
+    This function will zoom on animal.jpeg and turn it to grey.
+    Then rotate it.
+    """
     try:
         img = Image.open("animal.jpeg")
         img_array = np.array(img)
