@@ -1,10 +1,12 @@
 from load_csv import load
 import matplotlib.pyplot as plt
+import matplotlib as mplt
+mplt.use("TkAgg")
 
 
 def main():
     try:
-        data = load('../data python piscine/life_expectancy_years.csv')
+        data = load('./population_total.csv')
         if (data is None):
             print("test")
             return
@@ -23,8 +25,10 @@ def main():
 
         xf = France.columns.tolist()
         yf = France.iloc[0].values.tolist()
+        yf = [float(pop[:-1]) for pop in yf]
         xb = Brazil.columns.tolist()
         yb = Brazil.iloc[0].values.tolist()
+        yb = [float(pop[:-1]) for pop in yb]
 
         plt.figure(figsize=(15, 5))  # Pour agrandir le graphique
 

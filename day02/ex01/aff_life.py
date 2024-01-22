@@ -1,10 +1,11 @@
 from load_csv import load
 import matplotlib.pyplot as plt
-
+import matplotlib as mplt
+mplt.use("TkAgg")
 
 def main():
     try:
-        data = load('../data python piscine/life_expectancy_years.csv')
+        data = load('life_expectancy_years.csv')
         if (data is None):
             return
         France = data[data['country'] == 'France']

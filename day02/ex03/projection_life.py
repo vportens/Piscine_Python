@@ -1,12 +1,13 @@
 from load_csv import load
 import matplotlib.pyplot as plt
+import matplotlib as mplt
+mplt.use("TkAgg")
 
 
 def main():
     try:
-        path2 = ("../data python piscine/"
-                 "income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
-        path1 = ("../data python piscine/life_expectancy_years.csv")
+        path2 = ("./income_per_person_gdppercapita_ppp_inflation_adjusted.csv")
+        path1 = ("./life_expectancy_years.csv")
         data_life_time = load(path1)
         data_gdp = load(path2)
         if (data_life_time is None or data_gdp is None):
