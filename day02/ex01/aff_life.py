@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mplt
 mplt.use("TkAgg")
 
+
 def main():
     try:
         data = load('life_expectancy_years.csv')
