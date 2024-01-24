@@ -27,6 +27,9 @@ class Stark(Character):
     """
 
     def __init(self, first_name, is_alive=True):
+        """
+        Constructor of Stark class
+        """
         super().__init__(first_name, is_alive)
 
     def die(self):
