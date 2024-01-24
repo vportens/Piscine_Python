@@ -1,12 +1,9 @@
-from typing import List
-
-
 class calculator:
     """
     Class calculator
     """
     @staticmethod
-    def dotproduct(V1: List[float], V2: List[float]) -> float:
+    def dotproduct(V1: list[float], V2: list[float]) -> float:
         """
         Function product dot
         """
@@ -14,7 +11,7 @@ class calculator:
         print("Dot product is: ", ret)
 
     @staticmethod
-    def add_vec(V1: List[float], V2: List[float]) -> List[float]:
+    def add_vec(V1: list[float], V2: list[float]) -> list[float]:
         """
         Function add vec
         """
@@ -22,7 +19,7 @@ class calculator:
         print("Add Vector is: ", ret)
 
     @staticmethod
-    def sous_vec(V1: List[float], V2: List[float]) -> List[float]:
+    def sous_vec(V1: list[float], V2: list[float]) -> list[float]:
         """
         Function Sous vec
         """
