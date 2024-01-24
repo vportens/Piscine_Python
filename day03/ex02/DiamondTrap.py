@@ -2,38 +2,29 @@ from S1E7 import Baratheon, Lannister
 
 
 class King(Baratheon, Lannister):
+    """
+    Class King take Baratheon and Lannister class
+    """
 
     def __init__(self, first_name, is_alive=True):
+        """
+        Init from Baratheon class
+        """
         # Initialiser à partir de la classe Baratheon
         Baratheon.__init__(self, first_name, is_alive)
-        self._eyes = self.eyes
-        self._hairs = self.hairs
 
-    # Initialisation de proprety pour redefinir attribution de eyes et hairs
-    @property
-    def eyes(self):
-        return self._eyes
+    def set_eyes(self, eyes: str):
+        """change the eyes attribute"""
+        self.eyes = eyes
 
-    @eyes.setter
-    def eyes(self, value):
-        self._eyes = value
-
-    @property
-    def hairs(self):
-        return self._hairs
-
-    @hairs.setter
-    def hairs(self, value):
-        self._hairs = value
-
-    def set_eyes(self, value):
-        self.eyes = value
-
-    def set_hairs(self, value):
-        self.hairs = value
+    def set_hairs(self, hairs: str):
+        """change the hairs attribute"""
+        self.hairs = hairs
 
     def get_eyes(self):
+        """return the eyes attribute"""
         return self.eyes
 
     def get_hairs(self):
+        """return the hairs attribute"""
         return self.hairs
