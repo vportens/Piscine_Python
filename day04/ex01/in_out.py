@@ -10,6 +10,7 @@ def square(x: int | float):
         print(e)
         return ret
 
+
 def pow(x: int | float):
     """
     Return the exponential of x by x.
@@ -21,11 +22,31 @@ def pow(x: int | float):
     except Exception as e:
         print(e)
         return ret
- 
-def outer(x:int | float, function):
+
+
+def outer(x: int | float, function):
+
+    """
+    Returns a closure that takes no arguments and applies
+    the given function to the input value.
+
+    Parameters:
+    x (int | float): The input value.
+    function (callable): The function to be applied to the input value.
+
+    Returns:
+    callable: A closure that applies the given function to the
+    input value and returns the result.
+    """
     count = 0
 
     def inner():
+        """
+        Applies the given function to the input value and returns the result.
+
+        Returns:
+        int | float: The result of applying the function to the input value.
+        """
         nonlocal count
         nonlocal x
         count += 1
@@ -37,32 +58,3 @@ def outer(x:int | float, function):
             return 0
 
     return inner
-    
-
-def main():
-    try:
-        my_counter = outer(3, square)
-        print(my_counter()) 
-        print(my_counter())
-        print(my_counter())
-        print("---")
-        another_counter = outer(1.5, pow)
-        print(another_counter())
-        print(another_counter())
-        print(another_counter())
-        test_maxint = outer(350000, square)
-        print(test_maxint())
-        print(test_maxint())
-        print(test_maxint())
-        print(test_maxint())
-        print(test_maxint())
-        print(test_maxint())
-        print(test_maxint())
-        print(test_maxint())
-        print(test_maxint())
-        print(test_maxint())
-    except Exception as e:
-        print(e)
-    
-if __name__ == "__main__":
-    main()
