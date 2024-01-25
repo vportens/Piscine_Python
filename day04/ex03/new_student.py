@@ -17,11 +17,11 @@ class Student:
     - name (str)
     - surname (str)
 
-    Class have 3 other params that self init : 
+    Class have 3 other params that self init :
     - active (bool == true)
     - id (str randomgenerated)
     - login (first letter of name + 7 letter of surname)
-    
+
     Use of field to set what need to be init or not
     """
     name: str = field(init=True)
